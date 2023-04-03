@@ -12,7 +12,6 @@ public class Validator {
     public static void validationTypeRequest(String request) throws Exception {
         String[] s = request.split(" ");
         if ((s[0].equalsIgnoreCase("insert") ||
-                s[0].equalsIgnoreCase("select") ||
                 s[0].equalsIgnoreCase("update"))) {
 
             if (s.length == 1 || !s[1].equalsIgnoreCase("values")) {

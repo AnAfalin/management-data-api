@@ -29,9 +29,7 @@ public class JavaSchoolStarter {
 
         String leftAlignFormat = "| %-4s | %-23s | %-4s | %-6s | %-6s |%n";
 
-        System.out.format("+------+-------------------------+------+--------+--------+%n");
-        System.out.format("| id   | lastName                | age  | cost   | active |%n");
-        System.out.format("+------+-------------------------+------+--------+--------+%n");
+        printHeadersTable();
 
         for (int i = 1; i < data.size(); i++) {
             Map<String, Object> row = data.get(i);
@@ -40,8 +38,7 @@ public class JavaSchoolStarter {
                     row.get(titles.get(3)), row.get(titles.get(4)));
         }
 
-        System.out.format("+------+-------------------------+------+--------+--------+%n");
-        System.out.println();
+        printLastLine();
     }
 
     public void printTable(List<Map<String, Object>> data) {
@@ -49,9 +46,7 @@ public class JavaSchoolStarter {
 
         String leftAlignFormat = "| %-4s | %-23s | %-4s | %-6s | %-6s |%n";
 
-        System.out.format("+------+-------------------------+------+--------+--------+%n");
-        System.out.format("| id   | lastName                | age  | cost   | active |%n");
-        System.out.format("+------+-------------------------+------+--------+--------+%n");
+        printHeadersTable();
 
         for (int i = 0; i < data.size(); i++) {
             Map<String, Object> row = data.get(i);
@@ -60,7 +55,18 @@ public class JavaSchoolStarter {
                     row.get(titles.get(3)), row.get(titles.get(4)));
         }
 
+        printLastLine();
+    }
+
+    private void printHeadersTable() {
+        System.out.format("+------+-------------------------+------+--------+--------+%n");
+        System.out.format("| id   | lastName                | age  | cost   | active |%n");
+        System.out.format("+------+-------------------------+------+--------+--------+%n");
+    }
+
+    private void printLastLine() {
         System.out.format("+------+-------------------------+------+--------+--------+%n");
         System.out.println();
+
     }
 }

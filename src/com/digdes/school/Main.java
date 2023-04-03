@@ -31,7 +31,7 @@ public class Main {
             starter.printTable(execute7);
 
             List<Map<String, Object>> execute8 = starter.execute(
-                    "select values where 'age'> 18");
+                    "select where 'age'> 18");
             starter.printTable(execute8);
 
             List<Map<String, Object>> execute9 = starter.execute(
